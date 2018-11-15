@@ -18,7 +18,10 @@ public class Division
         // initialise instance variables
         x = 0;
     }
-
+    //TODO Add a Team
+    //TODO Get Divison Standings
+    //TODO Remove a Team
+    //TODO Change Divison name?
     /**
      * An example of a method - replace this comment with your own
      *

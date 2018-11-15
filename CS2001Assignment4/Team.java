@@ -9,7 +9,6 @@ import java.util.Iterator;
  */
 public class Team
 {
-    // instance variables - replace the example below with your own
     private String teamName;
     private Coach teamCoach;
     private int points;
@@ -29,8 +28,15 @@ public class Team
     public void display()
     {
         
-        
         Iterator iterator = Roster.iterator(); 
+        
+        System.out.println("Current Roster for " + teamName + ":");
+        System.out.println("Coach: ");
+        teamCoach.display();
+        System.out.println("Players: ");
+        while (iterator.hasNext())
+            System.out.println(iterator.next() + " ");
+        
         
     }
     //TODO Add goals
@@ -38,11 +44,12 @@ public class Team
     //TODO Add match points
     //TODO Remove match points
     /**
-     * 
+     * Adds a player to the Roster
      */
-    public void addPlayer(String playerName, int playerNumber)
+    public void addPlayer(String playerName, String playerNumber)
     {
         // put your code here
-        
+        Player player = new Player(playerName, playerNumber);
+        Roster.add(player);
     }
 }

@@ -2,12 +2,11 @@
 /**
  * Write a description of class Coach here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author JohnRoss Gillespie &
+ * @version 1
  */
 public class Coach extends Person
 {
-    // instance variables - replace the example below with your own
     private String gender;
 
     /**
