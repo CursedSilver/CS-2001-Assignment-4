@@ -7,10 +7,12 @@
  */
 public class Player extends Person
 {
-    // instance variables - replace the example below with your own
     private String number;
     /**
      * Constructor for objects of class Player
+     * 
+     * @param name Name of the player
+     * @param number Number of the player
      */
     public Player(String name, String number)
     {
@@ -20,7 +22,7 @@ public class Player extends Person
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Displays player's name and number
      */
     public void display()
     {

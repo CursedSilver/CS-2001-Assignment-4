@@ -9,15 +9,16 @@ import java.util.Random;
 public class LeagueTester
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private String leagueName;
+    private static ArrayList<String> playerNames = new ArrayList<>();
+    Random random;
     
     /**
      * Constructor for objects of class LeagueTester
      */
     public LeagueTester()
     {
-        // initialise instance variables
-        x = 0;
+        
     }
     //TODO Create a list of random player names
     //TODO Create a list of random team names
@@ -26,15 +27,14 @@ public class LeagueTester
     //TODO Create a random Coach
     //TODO Create a random Team
     //TODO Create a random League
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+        
+    private League createLeague(int numDivisons, int numTeams, int numPlayers)
     {
-        // put your code here
-        return x + y;
+        return new League(leagueName, divisions);
+    }
+    public League leagueSetup()
+    {
+        this.random = new Random();
+        return createLeague(4, 6, 22);
     }
 }

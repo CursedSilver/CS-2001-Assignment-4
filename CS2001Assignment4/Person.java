@@ -10,7 +10,9 @@ public class Person
     private String name;
 
     /**
-     * Constructor for objects of class Person
+     * Creates a person object
+     * 
+     * @param name Name of the person
      */
     public Person(String name)
     {

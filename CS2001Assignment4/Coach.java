@@ -11,6 +11,9 @@ public class Coach extends Person
 
     /**
      * Constructor for objects of class Coach
+     * 
+     * @param name Name of the Coach
+     * @param gender Gender  of the Coach
      */
     public Coach(String name, String gender)
     {
