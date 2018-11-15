@@ -32,10 +32,10 @@ public class Division
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public void AddTeam (String teamName, ArrayList<Player> players, String coachName, String gender, int goalDifference )
+    public void AddTeam (String teamName, ArrayList<Player> players, String coachName, String gender)
     {
         // put your code here
-        Team newTeam = new Team(teamName, players, coachName, gender, goalDifference);
+        Team newTeam = new Team(teamName, players, coachName, gender);
         teamList.add(newTeam);
     }
 }

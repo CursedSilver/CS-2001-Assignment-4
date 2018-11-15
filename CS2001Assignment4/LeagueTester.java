@@ -15,6 +15,7 @@ public class LeagueTester
     private ArrayList<String> teamNames = new ArrayList<>();
     private ArrayList<String> divisionNames = new ArrayList<>();
     private ArrayList<String> leagueNames = new ArrayList<>();
+    private ArrayList<String> genders = new ArrayList<>();
     Random random;
     
     /**
@@ -25,6 +26,8 @@ public class LeagueTester
         coachNames.add("Mr. Meesiks"); coachNames.add("Bird Person"); coachNames.add("Jerry");
         coachNames.add("Ralph"); coachNames.add("Micheal"); coachNames.add("Eric"); 
         coachNames.add("Brendan"); coachNames.add("Devin"); coachNames.add("Karl");
+        
+        genders.add("Male"); genders.add("Female");
         
         playerNames.add("John"); playerNames.add("Paul"); playerNames.add("Dawn");
         playerNames.add("Shawn"); playerNames.add("Jake"); playerNames.add("Chris");

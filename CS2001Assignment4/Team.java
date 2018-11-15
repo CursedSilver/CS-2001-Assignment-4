@@ -11,22 +11,26 @@ public class Team
 {
     private String teamName;
     private Coach teamCoach;
-    private int points;
     private ArrayList<Player> Roster;
-    private int goalDifference;    
+    private int goals;
+    private int matchPoints;   
 
     /**
      * Constructor for objects of class Team
      */
-    public Team(String teamName, ArrayList<Player> players, String coachName, String gender, int goalDifference)
+    public Team(String teamName, ArrayList<Player> players, String coachName, String gender)
     {
         this.teamName = teamName;
         this.Roster = players;
         Coach teamCoach = new Coach(coachName, gender);
-        this.goalDifference = goalDifference;
+        goals = 0;
+        matchPoints = 0;
        
     }
     
+    /**
+     * Displays the team's coach and roster
+     */
     public void display()
     {
         
@@ -41,17 +45,50 @@ public class Team
         
         
     }
-    //TODO Add goals
-    //TODO Remove player
-    //TODO Add match points
-    //TODO Remove match points
+
+    /**
+     * Adds goals of new match
+     * 
+     * @param newGoals Goals scored in current Match
+     */
+    public void addGoals(int newGoals)
+    {
+        goals = goals + newGoals;
+    }
+    
+    /**
+     * Adds match result points to the teams current total
+     * 
+     * @param newMatchPoints Points scored from the current match
+     */
+    public void addMatchPoints(int newMatchPoints)
+    {
+        matchPoints = matchPoints + newMatchPoints;
+    }
+    
     /**
      * Adds a player to the Roster
+     * 
+     * @param playerName Player's name
+     * @param playerNumber Player's number
      */
     public void addPlayer(String playerName, String playerNumber)
     {
-        // put your code here
-        Player player = new Player(playerName, playerNumber);
-        Roster.add(player);
+        if (Roster.size() < 22){
+            Player player = new Player(playerName, playerNumber);
+            Roster.add(player);
+        }
+    }
+    
+    /**
+     * Removes match points from the teams current total
+     * 
+     * @param newMatchPoints
+     */
+    public void removeMatchPoints(int newMatchPoints)
+    {
+        if(matchPoints > 0){
+            matchPoints = matchPoints - newMatchPoints;
+        }
     }
 }
