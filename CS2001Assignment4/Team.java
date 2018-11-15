@@ -13,16 +13,18 @@ public class Team
     private Coach teamCoach;
     private int points;
     private ArrayList<Player> Roster;
+    private int goalDifference;    
 
     /**
      * Constructor for objects of class Team
      */
-    public Team(String teamName, ArrayList<Player> players, String coachName, String gender)
+    public Team(String teamName, ArrayList<Player> players, String coachName, String gender, int goalDifference)
     {
         this.teamName = teamName;
         this.Roster = players;
         Coach teamCoach = new Coach(coachName, gender);
-        
+        this.goalDifference = goalDifference;
+       
     }
     
     public void display()

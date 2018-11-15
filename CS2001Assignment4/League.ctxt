@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=League
-comment0.text=\n\ Write\ a\ description\ of\ class\ League\ here.\n\n\ @author\ JohnRoss\ Gillespie\ &\n\ @version\ 1\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ League\ here.\r\n\r\n\ @author\ JohnRoss\ Gillespie\ &\r\n\ @version\ 1\r\n
 comment1.params=leagueName\ divisons
 comment1.target=League(java.lang.String,\ java.util.ArrayList)
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ League\n
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ League\r\n
 comment2.params=y
 comment2.target=void\ sampleMethod(int)
-comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\n
+comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
 numComments=3

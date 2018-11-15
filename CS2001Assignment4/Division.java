@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Write a description of class Division here.
  *
@@ -9,14 +9,18 @@ public class Division
 {
     // instance variables - replace the example below with your own
     private int x;
+    private String DivisionName;
+    private ArrayList<Team> teamList;  
 
     /**
      * Constructor for objects of class Division
      */
-    public Division()
+    public Division(String DivisonName, ArrayList<Team> teams)
     {
         // initialise instance variables
-        x = 0;
+        this.DivisionName = DivisionName;
+        this.teamList = teams;
+        
     }
     //TODO Add a Team
     //TODO Get Divison Standings
@@ -28,9 +32,10 @@ public class Division
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    public void AddTeam (String teamName, ArrayList<Player> players, String coachName, String gender, int goalDifference )
     {
         // put your code here
-        return x + y;
+        Team newTeam = new Team(teamName, players, coachName, gender, goalDifference);
+        teamList.add(newTeam);
     }
 }

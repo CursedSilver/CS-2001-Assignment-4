@@ -1,12 +1,12 @@
 #BlueJ class context
 comment0.target=Team
-comment0.text=\n\ Keeps\ a\ roster\ of\ players\ and\ a\ coach.\ \n\ Also\ tracks\ match\ wins\ &\ loses\ and\ goals\ scored.\n\n\ @author\ JohnRoss\ Gillespie\ &\n\ @version\ 1\n
-comment1.params=teamName\ players\ coachName\ gender
-comment1.target=Team(java.lang.String,\ java.util.ArrayList,\ java.lang.String,\ java.lang.String)
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Team\n
+comment0.text=\r\n\ Keeps\ a\ roster\ of\ players\ and\ a\ coach.\ \r\n\ Also\ tracks\ match\ wins\ &\ loses\ and\ goals\ scored.\r\n\r\n\ @author\ JohnRoss\ Gillespie\ &\r\n\ @version\ 1\r\n
+comment1.params=teamName\ players\ coachName\ gender\ goalDifference
+comment1.target=Team(java.lang.String,\ java.util.ArrayList,\ java.lang.String,\ java.lang.String,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Team\r\n
 comment2.params=
 comment2.target=void\ display()
 comment3.params=playerName\ playerNumber
 comment3.target=void\ addPlayer(java.lang.String,\ java.lang.String)
-comment3.text=\n\ Adds\ a\ player\ to\ the\ Roster\n
+comment3.text=\r\n\ Adds\ a\ player\ to\ the\ Roster\r\n
 numComments=4
