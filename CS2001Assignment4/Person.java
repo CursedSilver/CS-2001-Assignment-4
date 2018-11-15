@@ -1,33 +1,28 @@
 
 /**
- * Write a description of class Person here.
+ * The description of a person. 
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author JohnRoss Gillepsie &
+ * @version 1
  */
 public class Person
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private String name;
 
     /**
      * Constructor for objects of class Person
      */
-    public Person()
+    public Person(String name)
     {
         // initialise instance variables
-        x = 0;
+        this.name = name;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Displays the name of the the person
      */
-    public int sampleMethod(int y)
+    public void display()
     {
-        // put your code here
-        return x + y;
+        System.out.println("Name:" + name);
     }
 }

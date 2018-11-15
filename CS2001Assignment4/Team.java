@@ -1,33 +1,48 @@
-
+import java.util.ArrayList;
+import java.util.Iterator;
 /**
- * Write a description of class Team here.
+ * Keeps a roster of players and a coach. 
+ * Also tracks match wins & loses and goals scored.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author JohnRoss Gillespie &
+ * @version 1
  */
 public class Team
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private String teamName;
+    private Coach teamCoach;
+    private int points;
+    private ArrayList<Player> Roster;
 
     /**
      * Constructor for objects of class Team
      */
-    public Team()
+    public Team(String teamName, ArrayList<Player> players, String coachName, String gender)
     {
-        // initialise instance variables
-        x = 0;
+        this.teamName = teamName;
+        this.Roster = players;
+        Coach teamCoach = new Coach(coachName, gender);
+        
     }
-
+    
+    public void display()
+    {
+        
+        
+        Iterator iterator = Roster.iterator(); 
+        
+    }
+    //TODO Add goals
+    //TODO Remove player
+    //TODO Add match points
+    //TODO Remove match points
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * 
      */
-    public int sampleMethod(int y)
+    public void addPlayer(String playerName, int playerNumber)
     {
         // put your code here
-        return x + y;
+        
     }
 }

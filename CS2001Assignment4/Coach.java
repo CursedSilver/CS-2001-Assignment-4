@@ -5,29 +5,26 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Coach
+public class Coach extends Person
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private String gender;
 
     /**
      * Constructor for objects of class Coach
      */
-    public Coach()
+    public Coach(String name, String gender)
     {
-        // initialise instance variables
-        x = 0;
+        super(name);
+        this.gender = gender;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Displays name and gender of the coach
      */
-    public int sampleMethod(int y)
+    public void display()
     {
-        // put your code here
-        return x + y;
+        super.display();
+        System.out.println("Gender: " + gender);
     }
 }

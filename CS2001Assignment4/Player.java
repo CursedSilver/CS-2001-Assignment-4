@@ -1,33 +1,31 @@
 
 /**
- * Write a description of class Player here.
+ * A player of a team, has a name and number.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author JohnRoss Gillespie
+ * @version 1
  */
-public class Player
+public class Player extends Person
 {
     // instance variables - replace the example below with your own
-    private int x;
-
+    private String number;
     /**
      * Constructor for objects of class Player
      */
-    public Player()
+    public Player(String name, String number)
     {
         // initialise instance variables
-        x = 0;
+        super(name);
+        this.number = number;
     }
 
     /**
      * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    public void display()
     {
-        // put your code here
-        return x + y;
+        super.display();
+        
+        System.out.println("Number: " + number);
     }
 }
