@@ -17,15 +17,11 @@ public class Division
      */
     public Division(String DivisonName, ArrayList<Team> teams)
     {
-        // initialise instance variables
         this.DivisionName = DivisionName;
         this.teamList = teams;
-        
     }
-    //TODO Add a Team
     //TODO Get Divison Standings
     //TODO Remove a Team
-    //TODO Change Divison name?
     /**
      * An example of a method - replace this comment with your own
      *
@@ -34,11 +30,9 @@ public class Division
      */
     public void AddTeam (String teamName, ArrayList<Player> players, String coachName, String gender)
     {
-        // put your code here
         Team newTeam = new Team(teamName, players, coachName, gender);
         teamList.add(newTeam);
     }
-    
     
      /**
      * Adds a win result points to the teams current total
@@ -46,8 +40,7 @@ public class Division
      * @param newMatchPoints Points scored from the current match
      */
     public void match(String Team1, String Team2, int goals1, int goals2)
-    {
-        
+    {  
      if(goals1 == goals2)
     {
             teamList.stream()
@@ -71,7 +64,7 @@ public class Division
                          .forEach(Team -> Team.addWin());        
     }
     }  
-}  
+    }  
 }
 
 

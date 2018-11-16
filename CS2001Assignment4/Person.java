@@ -16,7 +16,6 @@ public class Person
      */
     public Person(String name)
     {
-        // initialise instance variables
         this.name = name;
     }
 

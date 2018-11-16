@@ -10,12 +10,12 @@ public class League
     // instance variables - replace the example below with your own
     private String leagueName;
     
-    private ArrayList<Team> divisons;
+    private ArrayList<Division> divisons;
     
     /**
      * Constructor for objects of class League
      */
-    public League(String leagueName, ArrayList<Team> divisons)
+    public League(String leagueName, ArrayList<Division> divisons)
     {
         this.leagueName = leagueName;
         this.divisons = divisons;

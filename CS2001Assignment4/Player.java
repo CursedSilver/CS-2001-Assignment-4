@@ -8,6 +8,7 @@
 public class Player extends Person
 {
     private String number;
+    
     /**
      * Constructor for objects of class Player
      * 
@@ -16,8 +17,8 @@ public class Player extends Person
      */
     public Player(String name, String number)
     {
-        // initialise instance variables
         super(name);
+        
         this.number = number;
     }
 
@@ -29,5 +30,15 @@ public class Player extends Person
         super.display();
         
         System.out.println("Number: " + number);
+    }
+    
+    /**
+     * Returns the players number
+     * 
+     * @return number The players number
+     */
+    public String getNumber()
+    {
+        return number;
     }
 }

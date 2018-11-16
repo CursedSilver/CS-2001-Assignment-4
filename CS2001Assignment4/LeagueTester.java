@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Iterator;
 /**
  * Write a description of class LeagueTester here.
  *
@@ -16,6 +17,7 @@ public class LeagueTester
     private ArrayList<String> divisionNames = new ArrayList<>();
     private ArrayList<String> leagueNames = new ArrayList<>();
     private ArrayList<String> genders = new ArrayList<>();
+    private ArrayList<String> numbers = new ArrayList<>();
     Random random;
     
     /**
@@ -23,6 +25,10 @@ public class LeagueTester
      */
     public LeagueTester()
     {
+        numbers.add("1"); numbers.add("2"); numbers.add("3"); numbers.add("4"); numbers.add("5"); numbers.add("6"); numbers.add("7"); 
+        numbers.add("8"); numbers.add("9"); numbers.add("10"); numbers.add("11"); numbers.add("12"); numbers.add("13"); numbers.add("14");
+        numbers.add("15");
+        
         coachNames.add("Mr. Meesiks"); coachNames.add("Bird Person"); coachNames.add("Jerry");
         coachNames.add("Ralph"); coachNames.add("Micheal"); coachNames.add("Eric"); 
         coachNames.add("Brendan"); coachNames.add("Devin"); coachNames.add("Karl");
@@ -47,26 +53,59 @@ public class LeagueTester
         
         
     }
-    //TODO Create a random player
-    //TODO Create a random Coach
-    //TODO Create a random Team
     //TODO Create a random League
-    private Coach randomCoach()
-    {
-    }
     private Player randomPlayer()
     {
+        Iterator iterator = numbers.listIterator();
+        String randomPlayer = playerNames.get(random.nextInt(playerNames.size()));
+        String randomNumber = numbers.get(random.nextInt(numbers.size()));
+        return new Player(randomPlayer, randomNumber);
     }
+    
     private Team randomTeam(int numPlayers)
     {
+        String coachName = coachNames.get(random.nextInt(coachNames.size()));
+        String gender = genders.get(random.nextInt(genders.size()));
+        String teamName = teamNames.get(random.nextInt(teamNames.size()));
+        ArrayList<Player> playerList = new ArrayList<>();
+        for(int i = 0; i < numPlayers; i++) {
+            Player player = randomPlayer();
+            playerList.add(player);
+        }
+        return new Team(teamName, playerList, coachName, gender);
     }
-    private League createLeague(int numDivisons, int numTeams, int numPlayers)
+    
+    private Division randomDivision(int numTeams, int numPlayers)
     {
-        return new League(leagueName, divisions);
+        String divisionName = divisionNames.get(random.nextInt(divisionNames.size()));
+        ArrayList<Team> teamList = new ArrayList<>();
+        for(int i=0; i < numTeams; i++) {
+            Team team = randomTeam(numPlayers);
+            teamList.add(team);
+        }
+        return new Division(divisionName, teamList);
     }
+    
+    private League createLeague(int numDivisions, int numTeams, int numPlayers)
+    {
+        String leagueName = leagueNames.get(random.nextInt(leagueNames.size()));
+        ArrayList<Division> divisionList = new ArrayList<>();
+        for(int i=0; i < numDivisions; i++) {
+            Division division = randomDivision(numTeams, numPlayers);
+            divisionList.add(division);
+        }
+        return new League(leagueName, divisionList);
+    }
+    
     public League leagueSetup()
     {
         this.random = new Random();
         return createLeague(4, 6, 22);
+    }
+    
+    public League customLeague(int numDivisions, int numTeams, int numPlayers)
+    {
+        this.random = new Random();
+        return createLeague(numDivisions, numTeams, numPlayers);
     }
 }

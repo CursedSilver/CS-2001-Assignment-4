@@ -11,7 +11,7 @@ public class Team
 {
     private String teamName;
     private Coach teamCoach;
-    private ArrayList<Player> Roster;
+    private ArrayList<Player> roster;
     private int goals;
     private int matchPoints;   
 
@@ -21,11 +21,10 @@ public class Team
     public Team(String teamName, ArrayList<Player> players, String coachName, String gender)
     {
         this.teamName = teamName;
-        this.Roster = players;
+        this.roster = players;
         Coach teamCoach = new Coach(coachName, gender);
         goals = 0;
         matchPoints = 0;
-       
     }
     
     /**
@@ -34,7 +33,7 @@ public class Team
     public void display()
     {
         
-        Iterator iterator = Roster.iterator(); 
+        Iterator iterator = roster.iterator(); 
         
         System.out.println("Current Roster for " + teamName + ":");
         System.out.println("Coach: ");
@@ -42,7 +41,6 @@ public class Team
         System.out.println("Players: ");
         while (iterator.hasNext())
             System.out.println(iterator.next() + " ");
-        
         
     }
 
@@ -84,9 +82,9 @@ public class Team
      */
     public void addPlayer(String playerName, String playerNumber)
     {
-        if (Roster.size() < 22){
+        if (roster.size() < 22){
             Player player = new Player(playerName, playerNumber);
-            Roster.add(player);
+            roster.add(player);
         }
     }
     
@@ -102,6 +100,20 @@ public class Team
         }
     }
     
+    /**
+     * Checks if the number is used by another player on the team.
+     * 
+     * @param player The player in question
+     */
+    public boolean numberCheck(Player player)
+    {
+        if(roster.contains(player.getNumber())){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     
     public String getName()
     {

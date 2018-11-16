@@ -18,6 +18,7 @@ public class Coach extends Person
     public Coach(String name, String gender)
     {
         super(name);
+        
         this.gender = gender;
     }
 
@@ -27,6 +28,7 @@ public class Coach extends Person
     public void display()
     {
         super.display();
+        
         System.out.println("Gender: " + gender);
     }
 }
