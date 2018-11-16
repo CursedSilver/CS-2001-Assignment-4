@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Iterator;
 /**
- * Write a description of class LeagueTester here.
+ * Methods for testing the creation of a league, division, and teams.
  *
  * @author JohnRoss Gillespie &
  * @version 1
@@ -53,7 +53,10 @@ public class LeagueTester
         
         
     }
-    //TODO Create a random League
+    
+    /**
+     * Creates a random player
+     */
     private Player randomPlayer()
     {
         Iterator iterator = numbers.listIterator();
@@ -62,6 +65,9 @@ public class LeagueTester
         return new Player(randomPlayer, randomNumber);
     }
     
+    /**
+     * Creates a random team
+     */
     private Team randomTeam(int numPlayers)
     {
         String coachName = coachNames.get(random.nextInt(coachNames.size()));
@@ -75,6 +81,9 @@ public class LeagueTester
         return new Team(teamName, playerList, coachName, gender);
     }
     
+    /** 
+     * Creates a random Division
+     */
     private Division randomDivision(int numTeams, int numPlayers)
     {
         String divisionName = divisionNames.get(random.nextInt(divisionNames.size()));
@@ -86,6 +95,9 @@ public class LeagueTester
         return new Division(divisionName, teamList);
     }
     
+    /**
+     * Creates a random league
+     */
     private League createLeague(int numDivisions, int numTeams, int numPlayers)
     {
         String leagueName = leagueNames.get(random.nextInt(leagueNames.size()));
@@ -97,12 +109,22 @@ public class LeagueTester
         return new League(leagueName, divisionList);
     }
     
+    /**
+     * Sets up a random league with 4 divisons, 6 teams per division and 22 players per team.
+     */
     public League leagueSetup()
     {
         this.random = new Random();
         return createLeague(4, 6, 22);
     }
     
+    /**
+     * Sets up a custom league 
+     * 
+     * @param numDivisions Number of divisions
+     * @param numTeams Number of teams per division
+     * @param numPlayers Number of players per team
+     */
     public League customLeague(int numDivisions, int numTeams, int numPlayers)
     {
         this.random = new Random();

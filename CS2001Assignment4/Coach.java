@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Coach here.
+ * Contains a coaches name and gender
  *
  * @author JohnRoss Gillespie &
  * @version 1

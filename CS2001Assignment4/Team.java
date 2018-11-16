@@ -115,6 +115,9 @@ public class Team
         }
     }
     
+    /**
+     * Gets the name of the team
+     */
     public String getName()
     {
         return teamName;
