@@ -57,13 +57,23 @@ public class Team
     }
     
     /**
-     * Adds match result points to the teams current total
+     * Adds a win result points to the teams current total
      * 
      * @param newMatchPoints Points scored from the current match
      */
-    public void addMatchPoints(int newMatchPoints)
+    public void addwin()
     {
-        matchPoints = matchPoints + newMatchPoints;
+        matchPoints = matchPoints + 3;
+    }
+    
+     /**
+     * Adds a win result points to the teams current total
+     * 
+     * @param newMatchPoints Points scored from the current match
+     */
+    public void addDraw()
+    {
+        matchPoints = matchPoints + 1;
     }
     
     /**
