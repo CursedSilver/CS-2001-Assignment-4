@@ -1,7 +1,10 @@
 import java.util.*;
 
 /**
- * Write a description of class Division here.
+ * Keeps track of teams in a Division.
+ * Holds division details 
+ * Creates matches and add points and goals to the team
+ * Returns standing of its teams and their points
  *
  * @author JohnRoss Gillespie & Hussein AbdelRahman 
  * @version 1
@@ -110,9 +113,11 @@ public class Division
            String name = (maxSofar).getName();
            int points = (maxSofar).getPoints();
            System.out.println(name);
+           System.out.println(points);
            i ++;
         }    
-        
+       System.out.println((teamList.get(length-1)).getName());
+       System.out.println((teamList.get(length-1)).getPoints());
         
     }
      

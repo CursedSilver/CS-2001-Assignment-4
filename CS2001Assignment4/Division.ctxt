@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Division
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Division\ here.\r\n\r\n\ @author\ JohnRoss\ Gillespie\ &\ Hussein\ AbdelRahman\ \r\n\ @version\ 1\r\n
+comment0.text=\r\n\ Keeps\ track\ of\ teams\ in\ a\ Division.\r\n\ Holds\ division\ details\ \r\n\ Creates\ matches\ and\ add\ points\ and\ goals\ to\ the\ team\r\n\ Returns\ standing\ of\ its\ teams\ and\ their\ points\r\n\r\n\ @author\ JohnRoss\ Gillespie\ &\ Hussein\ AbdelRahman\ \r\n\ @version\ 1\r\n
 comment1.params=DivisonName\ teams
 comment1.target=Division(java.lang.String,\ java.util.ArrayList)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Division\r\n
