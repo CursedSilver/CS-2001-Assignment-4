@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 /**
- * Write a description of class League here.
+ * Holds array of  Divisions
+ *Adds divisions
+ *Gets Division Standings for a certain division
  *
  * @author JohnRoss Gillespie & Hussein AbdelRahman 
  * @version 1
@@ -35,6 +37,16 @@ public class League
     }
  
     //TODO Remove a Divison
-    //TODO Get Divison Standings
+    
+    /**
+     * Returns the standings of the team in the division
+     * @param DivisionName Name of the Divison
+     */
+    public void getRanking(String name)
+    {
+             divisions.stream()
+                         .filter(Division -> name.equals(Division.getDName()))
+                         .forEach(Division -> Division.getStanding());  
+    }
 
 }

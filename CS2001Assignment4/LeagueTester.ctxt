@@ -1,19 +1,25 @@
 #BlueJ class context
 comment0.target=LeagueTester
-comment0.text=\n\ Write\ a\ description\ of\ class\ LeagueTester\ here.\n\n\ @author\ JohnRoss\ Gillespie\ &\n\ @version\ 1\n
+comment0.text=\r\n\ Methods\ for\ testing\ the\ creation\ of\ a\ league,\ division,\ and\ teams.\r\n\r\n\ @author\ JohnRoss\ Gillespie\ &\ Hussein\ AbdelRahman\r\n\ @version\ 1\r\n
 comment1.params=
 comment1.target=LeagueTester()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ LeagueTester\n
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ LeagueTester\r\n
 comment2.params=
 comment2.target=Player\ randomPlayer()
+comment2.text=\r\n\ Creates\ a\ random\ player\r\n
 comment3.params=numPlayers
 comment3.target=Team\ randomTeam(int)
+comment3.text=\r\n\ Creates\ a\ random\ team\r\n
 comment4.params=numTeams\ numPlayers
 comment4.target=Division\ randomDivision(int,\ int)
+comment4.text=\ \r\n\ Creates\ a\ random\ Division\r\n
 comment5.params=numDivisions\ numTeams\ numPlayers
 comment5.target=League\ createLeague(int,\ int,\ int)
+comment5.text=\r\n\ Creates\ a\ random\ league\r\n
 comment6.params=
 comment6.target=League\ leagueSetup()
+comment6.text=\r\n\ Sets\ up\ a\ random\ league\ with\ 4\ divisons,\ 6\ teams\ per\ division\ and\ 22\ players\ per\ team.\r\n
 comment7.params=numDivisions\ numTeams\ numPlayers
 comment7.target=League\ customLeague(int,\ int,\ int)
+comment7.text=\r\n\ Sets\ up\ a\ custom\ league\ \r\n\ \r\n\ @param\ numDivisions\ Number\ of\ divisions\r\n\ @param\ numTeams\ Number\ of\ teams\ per\ division\r\n\ @param\ numPlayers\ Number\ of\ players\ per\ team\r\n
 numComments=8

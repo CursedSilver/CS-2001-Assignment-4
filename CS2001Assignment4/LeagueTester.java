@@ -4,7 +4,7 @@ import java.util.Iterator;
 /**
  * Methods for testing the creation of a league, division, and teams.
  *
- * @author JohnRoss Gillespie &
+ * @author JohnRoss Gillespie & Hussein AbdelRahman
  * @version 1
  */
 public class LeagueTester

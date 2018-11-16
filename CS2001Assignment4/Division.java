@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * Write a description of class Division here.
@@ -78,16 +78,53 @@ public class Division
     
     /**
      * Sorts teams according to points and displays their standing
-     * 
+     * If points are equal, checks goals scored
      * 
      */
     public void getStanding()
     {
-       
+       int i = 0;
+       int j = 1;
+       int length = teamList.size();
+       Team maxSofar = teamList.get(0);
+       while( i < length)
+       {
+           j = i +1;           
+           while( j < length)
+           {
+               if( (teamList.get(i)).getPoints() == (teamList.get(j)).getPoints())
+               {
+                   if ((teamList.get(i)).getGoals() < (teamList.get(j)).getGoals())
+                   
+                   maxSofar = (teamList.get(j));
+                   Collections.swap(teamList, i, j);
+                }
+              
+               if( (teamList.get(i)).getPoints() < (teamList.get(j)).getPoints())
+               {
+                   maxSofar = (teamList.get(j));
+                   Collections.swap(teamList, i, j);
+                }
+                j++;
+            }
+           String name = (maxSofar).getName();
+           int points = (maxSofar).getPoints();
+           System.out.println(name);
+           i ++;
+        }    
         
         
-         
     }
+     
+    /**
+     * returns the name of the Division
+     */
+    public String getDName()
+    {
+        return DivisionName;
+    }
+    
+    
 }
 
 
