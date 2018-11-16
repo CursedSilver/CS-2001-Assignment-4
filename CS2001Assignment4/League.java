@@ -2,7 +2,7 @@ import java.util.ArrayList;
 /**
  * Write a description of class League here.
  *
- * @author JohnRoss Gillespie &
+ * @author JohnRoss Gillespie & Hussein AbdelRahman 
  * @version 1
  */
 public class League
@@ -10,29 +10,31 @@ public class League
     // instance variables - replace the example below with your own
     private String leagueName;
     
-    private ArrayList<Division> divisons;
+    private ArrayList<Division> divisions;
     
     /**
      * Constructor for objects of class League
      */
-    public League(String leagueName, ArrayList<Division> divisons)
+    public League(String leagueName, ArrayList<Division> divisoins)
     {
         this.leagueName = leagueName;
-        this.divisons = divisons;
+        this.divisions = divisions;
         
     }
-    //TODO Add a Divison
+    
+    
+    /**
+     * Adds Divisons to the League
+     * @param DivisionName Name of the Divison
+     * @param teams Teams in the division
+     */
+    public void addDivision(String DivisionName, ArrayList<Team> teams)
+    {
+        Division newDivision = new Division (DivisionName, teams);
+        divisions.add(newDivision);
+    }
+ 
     //TODO Remove a Divison
     //TODO Get Divison Standings
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public void sampleMethod(int y)
-    {
-        // put your code here
-        return;
-    }
+
 }

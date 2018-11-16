@@ -1,14 +1,14 @@
 import java.util.ArrayList;
+
 /**
  * Write a description of class Division here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author JohnRoss Gillespie & Hussein AbdelRahman 
+ * @version 1
  */
 public class Division
 {
     // instance variables - replace the example below with your own
-    private int x;
     private String DivisionName;
     private ArrayList<Team> teamList;  
 
@@ -23,10 +23,14 @@ public class Division
     //TODO Get Divison Standings
     //TODO Remove a Team
     /**
-     * An example of a method - replace this comment with your own
+     * Adds a team to the division
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  teamName Team's Name
+     * @param  players players in the team
+     * @param  coachName Name of team's coach
+     * @param  gender Coach's gender
+     * 
+     * 
      */
     public void AddTeam (String teamName, ArrayList<Player> players, String coachName, String gender)
     {
@@ -41,30 +45,49 @@ public class Division
      */
     public void match(String Team1, String Team2, int goals1, int goals2)
     {  
-     if(goals1 == goals2)
-    {
+      teamList.stream()
+                         .filter(Team -> Team1.equals(Team.getName()))
+                         .forEach(Team -> Team.addGoals(goals1));  
+      teamList.stream()
+                         .filter(Team -> Team2.equals(Team.getName()))
+                         .forEach(Team -> Team.addGoals(goals2));
+        if(goals1 == goals2)
+      {
             teamList.stream()
                          .filter(Team -> Team1.equals(Team.getName()))
                          .forEach(Team -> Team.addDraw());  
             teamList.stream()
                          .filter(Team -> Team2.equals(Team.getName()))
                          .forEach(Team -> Team.addDraw());
-    }
+      }
         else{
             if(goals1 > goals2)
-    {
+       {
         teamList.stream()
                          .filter(Team -> Team1.equals(Team.getName()))
                          .forEach(Team -> Team.addWin());
-    }
-    else
-    {
+       }
+       else
+       {
         teamList.stream()
                          .filter(Team -> Team2.equals(Team.getName()))
                          .forEach(Team -> Team.addWin());        
+       }
+       }  
     }
-    }  
-    }  
+    
+    /**
+     * Sorts teams according to points and displays their standing
+     * 
+     * 
+     */
+    public void getStanding()
+    {
+       
+        
+        
+         
+    }
 }
 
 

@@ -4,7 +4,7 @@ import java.util.Iterator;
  * Keeps a roster of players and a coach. 
  * Also tracks match wins & loses and goals scored.
  *
- * @author JohnRoss Gillespie &
+ * @author JohnRoss Gillespie & Hussein AbdelRahman 
  * @version 1
  */
 public class Team
@@ -116,10 +116,32 @@ public class Team
     }
     
     /**
-     * Gets the name of the team
+     * returns the name of the team
      */
     public String getName()
     {
         return teamName;
     }
+
+    /**
+     * returns the current points of the team
+     */
+    public int getPoints()
+    {
+        return matchPoints;    
+    
+    }
+    
+    /**
+     * returns the current points of the team
+     */
+    public int getGoals()
+    {
+        return goals;    
+    
+    }
+
+
+
 }
+
