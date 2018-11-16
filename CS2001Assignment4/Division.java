@@ -38,4 +38,40 @@ public class Division
         Team newTeam = new Team(teamName, players, coachName, gender);
         teamList.add(newTeam);
     }
+    
+    
+     /**
+     * Adds a win result points to the teams current total
+     * 
+     * @param newMatchPoints Points scored from the current match
+     */
+    public void match(String Team1, String Team2, int goals1, int goals2)
+    {
+        
+     if(goals1 == goals2)
+    {
+            teamList.stream()
+                         .filter(Team -> Team1.equals(Team.getName()))
+                         .forEach(Team -> Team.addDraw());  
+            teamList.stream()
+                         .filter(Team -> Team2.equals(Team.getName()))
+                         .forEach(Team -> Team.addDraw());
+    }
+        else{
+            if(goals1 > goals2)
+    {
+        teamList.stream()
+                         .filter(Team -> Team1.equals(Team.getName()))
+                         .forEach(Team -> Team.addWin());
+    }
+    else
+    {
+        teamList.stream()
+                         .filter(Team -> Team2.equals(Team.getName()))
+                         .forEach(Team -> Team.addWin());        
+    }
+    }  
+}  
 }
+
+

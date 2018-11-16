@@ -61,7 +61,7 @@ public class Team
      * 
      * @param newMatchPoints Points scored from the current match
      */
-    public void addwin()
+    public void addWin()
     {
         matchPoints = matchPoints + 3;
     }
@@ -100,5 +100,11 @@ public class Team
         if(matchPoints > 0){
             matchPoints = matchPoints - newMatchPoints;
         }
+    }
+    
+    
+    public String getName()
+    {
+        return teamName;
     }
 }
